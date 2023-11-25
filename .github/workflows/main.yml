@@ -16,7 +16,8 @@ jobs:
       - name: Depcheck
         uses: dependency-check/Dependency-Check_Action@main
          env:
-          JAVA_HOME: /opt/jdk
+           JAVA_HOME: /opt/jdk
+        id: Depcheck
         continue-on-error: true
         with:
           project: 'test'
@@ -28,6 +29,5 @@ jobs:
       - name: Upload Test results
         uses: actions/upload-artifact@master
         with:
-           name: report
-           path: ${{github.workspace}}/report
-           name:Depcheck
+           name: Depcheck report
+           path: ${{github.workspace}}/reports

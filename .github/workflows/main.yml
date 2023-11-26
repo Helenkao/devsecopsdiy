@@ -73,4 +73,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: rebeccaswc/devsecopsdiy:1.0  
+        tags: helenkao/devsecopsdiy:1.0  

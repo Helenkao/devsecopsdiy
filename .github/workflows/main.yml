@@ -31,7 +31,7 @@ jobs:
            name: Depcheck report
            path: ${{github.workspace}}/reports
 
-slscan:
+ slscan:
   runs-on: ubuntu-latest
   needs: depchecktest
   name: Perform SL Scan 
@@ -50,7 +50,7 @@ slscan:
       name: SLSCAN reports
       path: ${{github.workspace}}/reports
   
-build_and_push:
+ build_and_push:
   name: Build & Push to DockerHub
   needs: slscan
   runs-on: ubuntu-latest

@@ -11,14 +11,13 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
           cache: 'maven'
-      - name: Build project qith Maven
+      - name: Build project with Maven
         run: mvn clean install
       - name: Depcheck
         uses: dependency-check/Dependency-Check_Action@main
         env:
            JAVA_HOME: /opt/jdk
         id: Depcheck
-        continue-on-error: true
         with:
           project: 'test'
           path: '.'
